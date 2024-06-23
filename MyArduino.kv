@@ -1,0 +1,76 @@
+<LoginScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        paddin3g: 5
+
+        Label:
+            text: 'Herzlich willkommen in deiner Arduino-Steuerungs-App!'
+            halign: 'center'
+            valign: 'top'
+
+        TextInput:
+            id: password_input
+            hint_text: 'Code Eingeben'
+            password: True
+            multiline: False
+            size_hint_y: None
+            height: "40dp"
+            size_hint_x: 0.5
+            pos_hint: {"center_x": 0.5}
+
+        Button:
+            text: 'Anmelden'
+            on_press: root.connect(self)
+            size_hint_y: None
+            height: "40dp"
+            size_hint_x: 0.5
+            background_color: 0, 1, 0, 1
+            pos_hint: {"center_x": 0.5}
+
+        Label:
+            id: result_label
+            text: ''
+
+<MainScreen>:
+    FloatLayout:
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 1
+
+            Label:
+                text: 'Steuerungsbereich!'
+                pos_hint: {"top": 1}
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 25
+
+
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 25
+
+                Button:
+                    text: 'LED an'
+                    on_press: root.turn_on_led()
+                    size_hint_y: None
+                    height: "40dp"
+                    size_hint_x: 0.3
+
+                Button:
+                    text: 'LED aus'
+                    on_press: root.turn_off_led()
+                    size_hint_y: None
+                    height: "40dp"
+                    size_hint_x: 0.3
+
+            Button:
+                text: 'Abmelden'
+                on_press: root.disconnect()
+                size_hint_y: None
+                height: "60dp"
+                size_hint_x: 0.5
+                background_color: 1, 0, 0, 1
+                pos_hint: {"center_x": 0.5}

@@ -18,7 +18,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # Bibliothèques nécessaires
-requirements = python3,kivy,socket
+requirements = python3,kivy,bleak
 
 # Permissions Android
 android.permissions = INTERNET

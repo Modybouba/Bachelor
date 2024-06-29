@@ -4,7 +4,7 @@
 title = MyArduinoApp
 
 # Package
-package.name = myarduinoapp
+package.name = MyArduinoapp
 package.domain = org.test
 
 # Version de l'application (optionnel)

@@ -6,7 +6,7 @@ import asyncio
 from bleak import BleakClient, BleakScanner
 
 # Lade die KV-Datei, die die Benutzeroberflächendefinition enthält
-Builder.load_file("myarduino.kv")
+Builder.load_file("MyArduino.kv")
 
 # Warteschlange für asynchrone Aufrufe
 async_call_queue = asyncio.Queue()

@@ -1,76 +1,92 @@
+# mylabel.kv
+
+# Deklaration der Präsentationsregel für die LoginScreen-Klasse
 <LoginScreen>:
     BoxLayout:
         orientation: 'vertical'
         spacing: 10
-        paddin3g: 5
+        padding: 5
 
         Label:
-            text: 'Herzlich willkommen in deiner Arduino-Steuerungs-App!'
-            halign: 'center'
-            valign: 'top'
+            text: 'Herzlich willkommen in deiner Arduino-Steuerungs-App!'  # Begrüßungstext
+            halign: 'center'  # Zentrierte Ausrichtung des Textes
+            valign: 'top'  # Obere Ausrichtung des Textes
 
         TextInput:
             id: password_input
-            hint_text: 'Code Eingeben'
-            password: True
-            multiline: False
-            size_hint_y: None
-            height: "40dp"
-            size_hint_x: 0.5
-            pos_hint: {"center_x": 0.5}
+            hint_text: 'Code Eingeben'  # Platzhalter für das Passwortfeld
+            password: True  # Anzeige als Passwort (versteckt)
+            multiline: False  # Einzeilige Eingabe
+            size_hint_y: None  # Fixe Höhe
+            height: "40dp"  # Höhe des Eingabefelds
+            size_hint_x: 0.5  # Relative Breite
+            pos_hint: {"center_x": 0.5}  # Zentrierte Position
 
         Button:
-            text: 'Anmelden'
-            on_press: root.connect(self)
-            size_hint_y: None
-            height: "40dp"
-            size_hint_x: 0.5
-            background_color: 0, 1, 0, 1
-            pos_hint: {"center_x": 0.5}
+            text: 'Anmelden'  # Text des Anmeldebuttons
+            on_press: root.connect(self)  # Methode zur Verbindung beim Drücken des Buttons aufrufen
+            size_hint_y: None  # Fixe Höhe
+            height: "40dp"  # Höhe des Buttons
+            size_hint_x: 0.5  # Relative Breite
+            background_color: 0, 1, 0, 1  # Hintergrundfarbe des Buttons (Grün)
+            pos_hint: {"center_x": 0.5}  # Zentrierte Position
 
         Label:
             id: result_label
-            text: ''
+            text: ''  # Leeres Label für das Ergebnis der Anmeldung
 
+# Deklaration der Präsentationsregel für die MainScreen-Klasse
 <MainScreen>:
     FloatLayout:
         BoxLayout:
             orientation: 'vertical'
-            spacing: 1
+            spacing: 1  # Abstand zwischen den Widgets
 
             Label:
-                text: 'Steuerungsbereich!'
-                pos_hint: {"top": 1}
+                text: 'Steuerungsbereich!'  # Überschrift des Steuerungsbereichs
+                pos_hint: {"top": 1}  # Obere Ausrichtung der Überschrift
 
             BoxLayout:
-                orientation: 'horizontal'
-                spacing: 25
+                orientation: 'horizontal'  # Horizontale Anordnung der Buttons
+                spacing: 25  # Abstand zwischen den Buttons
 
+                Button:
+                    text: 'LED An1 (Bluetooth)'  # Text des Buttons zum Einschalten der LED über Bluetooth
+                    on_press: app.root.get_screen('main').call_turn_on_led_bluetooth()  # Aufruf der Methode zum Einschalten der LED über Bluetooth
+                    size_hint_y: None  # Fixe Höhe
+                    height: "40dp"  # Höhe des Buttons
+                    size_hint_x: 0.3  # Relative Breite
 
+                Button:
+                    text: 'LED Aus1 (Bluetooth)'  # Text des Buttons zum Ausschalten der LED über Bluetooth
+                    on_press: app.root.get_screen('main').call_turn_off_led_bluetooth()  # Aufruf der Methode zum Ausschalten der LED über Bluetooth
+                    size_hint_y: None  # Fixe Höhe
+                    height: "40dp"  # Höhe des Buttons
+                    size_hint_x: 0.3  # Relative Breite
 
             BoxLayout:
-                orientation: 'horizontal'
-                spacing: 25
+                orientation: 'horizontal'  # Horizontale Anordnung der Buttons
+                spacing: 25  # Abstand zwischen den Buttons
 
                 Button:
-                    text: 'LED an'
-                    on_press: root.turn_on_led()
-                    size_hint_y: None
-                    height: "40dp"
-                    size_hint_x: 0.3
+                    text: 'LED an (Wifi)'  # Text des Buttons zum Einschalten der LED über WLAN
+                    on_press: root.turn_on_led()  # Aufruf der Methode zum Einschalten der LED über WLAN
+                    size_hint_y: None  # Fixe Höhe
+                    height: "40dp"  # Höhe des Buttons
+                    size_hint_x: 0.3  # Relative Breite
 
                 Button:
-                    text: 'LED aus'
-                    on_press: root.turn_off_led()
-                    size_hint_y: None
-                    height: "40dp"
-                    size_hint_x: 0.3
+                    text: 'LED aus (Wifi)'  # Text des Buttons zum Ausschalten der LED über WLAN
+                    on_press: root.turn_off_led()  # Aufruf der Methode zum Ausschalten der LED über WLAN
+                    size_hint_y: None  # Fixe Höhe
+                    height: "40dp"  # Höhe des Buttons
+                    size_hint_x: 0.3  # Relative Breite
 
             Button:
-                text: 'Abmelden'
-                on_press: root.disconnect()
-                size_hint_y: None
-                height: "60dp"
-                size_hint_x: 0.5
-                background_color: 1, 0, 0, 1
-                pos_hint: {"center_x": 0.5}
+                text: 'Abmelden'  # Text des Abmeldebuttons
+                on_press: root.disconnect()  # Aufruf der Methode zum Trennen und Zurückkehren zum Login-Bildschirm
+                size_hint_y: None  # Fixe Höhe
+                height: "60dp"  # Höhe des Buttons
+                size_hint_x: 0.5  # Relative Breite
+                background_color: 1, 0, 0, 1  # Hintergrundfarbe des Buttons (Rot)
+                pos_hint: {"center_x": 0.5}  # Zentrierte Position

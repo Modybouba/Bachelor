@@ -4,7 +4,7 @@
 title = MyArduinoApp
 
 # Package
-package.name = MyArduinoapp
+package.name = myarduinoapp
 package.domain = org.test
 
 # Version de l'application (optionnel)
@@ -31,14 +31,13 @@ orientation = portrait
 # Option pour indiquer si l'application doit être en plein écran ou non
 fullscreen = 0
 
-# Icone de l'application (optionnel, à adapter)
-icon.filename = icon.png
+# Icône de l'application (optionnel, à adapter)
+icon.filename = /home/boubadiallo/temp_build/ArduinoApp/icon.png
 
 # Présplash de l'application (optionnel, à adapter)
-presplash.filename = presplash.png
+presplash.filename = /home/boubadiallo/temp_build/ArduinoApp/presplash.png
 
 # SDK et NDK paths
 [buildozer]
 android.sdk_path = /home/boubadiallo/.buildozer/android/platform/android-sdk
 android.ndk_path = /home/boubadiallo/.buildozer/android/platform/android-ndk-r21e
-

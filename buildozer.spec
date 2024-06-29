@@ -1,32 +1,44 @@
 [app]
 
-# Nom de votre application
+# Nom de l'application
 title = MyArduinoApp
 
-# Nom du package
+# Package
 package.name = myarduinoapp
+package.domain = org.test
 
-# Version de votre application
-version = 0.1
+# Version de l'application (optionnel)
+version = 1.0.0
 
-# Domaine du package
-package.domain = org.example
-# (str) Source code where the main.py is located
+# Chemin vers le fichier principal de votre application
 source.dir = .
 
-# Extensions à inclure
+# Extensions de fichiers à inclure dans la source
 source.include_exts = py,png,jpg,kv,atlas
 
-# Bibliothèques nécessaires
+# Dossiers à exclure
+source.exclude_dirs = tests, bin, .git, __pycache__
+
+# Dépendances de l'application (à adapter selon les besoins)
 requirements = python3,kivy,bleak
 
-# Permissions Android
-android.permissions = INTERNET
+# Autorisations nécessaires pour l'application Android
+android.permissions = INTERNET,BLUETOOTH,BLUETOOTH_ADMIN
 
-# Désactiver le support multithread
-android.multithreaded = 0
+# Orientations prises en charge
+orientation = portrait
+
+# Option pour indiquer si l'application doit être en plein écran ou non
+fullscreen = 0
+
+# Icone de l'application (optionnel, à adapter)
+icon.filename = icon.png
+
+# Présplash de l'application (optionnel, à adapter)
+presplash.filename = presplash.png
 
 # SDK et NDK paths
 [buildozer]
 android.sdk_path = /home/boubadiallo/.buildozer/android/platform/android-sdk
 android.ndk_path = /home/boubadiallo/.buildozer/android/platform/android-ndk-r21e
+

@@ -32,10 +32,10 @@ orientation = portrait
 fullscreen = 0
 
 # Icône de l'application (optionnel, à adapter)
-# icon.filename = icon.png
+# icon.filename = /home/boubadiallo/temp_build/ArduinoApp/icon.png
 
 # Présplash de l'application (optionnel, à adapter)
-# presplash.filename = presplash.png
+# presplash.filename = /home/boubadiallo/temp_build/ArduinoApp/presplash.png
 
 # SDK et NDK paths
 [buildozer]

@@ -25,7 +25,8 @@ source.dir = .
 
 # Konfiguration der Verteilungsdatei
 # Erstellen Sie ein Kivy-Paket mit den Kivy-Abhängigkeiten
-requirements = python3, kivy, bleak, asyncio, threading, kivy.uix.screenmanager, kivy.uix.screen, kivy.clock, kivy.lang, socket
+requirements = python3, kivy, bleak, asyncio, threading, kivy.uix.screenmanager, kivy.clock, kivy.lang, socket
+
 
 # Zusätzliche Argumente, die an p4a übergeben werden
 p4a = --sdk_dir=$HOME/.buildozer/android/platform/android-sdk

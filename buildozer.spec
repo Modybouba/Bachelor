@@ -20,6 +20,9 @@ source.exclude_exts = spec
 # (main.py) Hauptdatei der Anwendung
 source.main = main.py
 
+# (.) Quelle des Codes
+source.dir = .
+
 # Konfiguration der Verteilungsdatei
 # Erstellen Sie ein Kivy-Paket mit den Kivy-Abhängigkeiten
 requirements = python3, kivy, bleak, asyncio, threading, kivy.uix.screenmanager, kivy.uix.screen, kivy.clock, kivy.lang, socket

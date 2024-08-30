@@ -25,11 +25,12 @@ source.dir = .
 
 # Konfiguration der Verteilungsdatei
 # Erstellen Sie ein Kivy-Paket mit den Kivy-Abhängigkeiten
-requirements = python3, kivy, bleak, asyncio, threading, kivy.uix.screenmanager, kivy.clock, kivy.lang, socket
+requirements = python3, kivy, bleak, asyncio, threading, socket
+
 
 
 # Zusätzliche Argumente, die an p4a übergeben werden
-p4a = --sdk_dir=$HOME/.buildozer/android/platform/android-sdk
+#p4a = --sdk_dir=$HOME/.buildozer/android/platform/android-sdk
 
 # Unterstützte Bildschirmorientierung
 orientation = portrait
@@ -54,7 +55,7 @@ android.maxapi = 33
 android.sdk = 33
 
 # Architektur der Android-Anwendung (armeabi-v7a für 32 Bit, arm64-v8a für 64 Bit)
-# android.archs = armeabi-v7a
+android.archs = armeabi-v7a
 
 # Aktivierung von Cython-Optimierungen
 cython.optimize = 1

@@ -25,7 +25,7 @@ source.dir = .
 
 # Konfiguration der Verteilungsdatei
 # Erstellen Sie ein Kivy-Paket mit den Kivy-Abhängigkeiten
-requirements = python3, kivy, bleak, asyncio, threading
+requirements = python3, kivy, bleak, asyncio
 
 
 

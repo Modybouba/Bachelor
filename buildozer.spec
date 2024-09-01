@@ -25,7 +25,8 @@ source.dir = .
 
 # Konfiguration der Verteilungsdatei
 # Erstellen Sie ein Kivy-Paket mit den Kivy-Abhängigkeiten
-requirements = python3, kivy, bleak, asyncio
+requirements = python3, kivy, bleak, asyncio, setuptools, android
+
 
 
 
@@ -55,7 +56,8 @@ android.maxapi = 33
 android.sdk = 33
 
 # Architektur der Android-Anwendung (armeabi-v7a für 32 Bit, arm64-v8a für 64 Bit)
-android.archs = armeabi-v7a
+android.archs = armeabi-v7a, arm64-v8a
+
 
 # Aktivierung von Cython-Optimierungen
 cython.optimize = 1

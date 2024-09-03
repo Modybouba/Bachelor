@@ -54,7 +54,7 @@ android.minapi = 21
 android.maxapi = 33
 
 # Ziel-SDK für die Erstellung
-android.sdk = 33
+#android.sdk = 33
 
 # Architektur der Android-Anwendung (armeabi-v7a für 32 Bit, arm64-v8a für 64 Bit)
 android.archs = arm64-v8a

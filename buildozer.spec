@@ -38,7 +38,8 @@ orientation = portrait
 
 # Berechtigungen für die Anwendung deaktivieren
 # Berechtigungen für die Android-Anwendung (z. B. Netzwerkzugriff, Bluetooth)
-android.permissions = INTERNET, ACCESS_NETWORK_STATE, BLUETOOTH, BLUETOOTH_ADMIN, ACCESS_WIFI_STATE
+android.permissions = INTERNET, ACCESS_NETWORK_STATE, BLUETOOTH, BLUETOOTH_ADMIN, ACCESS_WIFI_STATE, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION
+
 
 # Wenn Sie spezifische Konfigurationsdateien oder Daten benötigen, können Sie sie hier angeben
 android.add_asset_dirs = assets
@@ -56,7 +57,7 @@ android.maxapi = 33
 android.sdk = 33
 
 # Architektur der Android-Anwendung (armeabi-v7a für 32 Bit, arm64-v8a für 64 Bit)
-android.archs = armeabi-v7a, arm64-v8a
+android.archs = arm64-v8a
 
 
 # Aktivierung von Cython-Optimierungen

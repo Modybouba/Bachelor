@@ -31,7 +31,7 @@ requirements = python3, kivy, bleak, asyncio, setuptools, android
 
 
 # Zusätzliche Argumente, die an p4a übergeben werden
-#p4a = --sdk_dir=$HOME/.buildozer/android/platform/android-sdk
+p4a = --sdk_dir=$HOME/.buildozer/android/platform/android-sdk
 
 # Unterstützte Bildschirmorientierung
 orientation = portrait
@@ -66,4 +66,4 @@ cython.optimize = 1
 [buildozer]
 # SDK et NDK paths
 android.sdk_path = /home/boubadiallo/.buildozer/android/platform/android-sdk
-android.ndk_path = /home/boubadiallo/.buildozer/android/platform/android-ndk-r21e
+android.ndk_path = /home/boubadiallo/.buildozer/android/platform/android-ndk-r25b

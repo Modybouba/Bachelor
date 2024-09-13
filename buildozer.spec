@@ -9,37 +9,40 @@ package.name = myarduinoapp
 package.domain = org.myarduino
 
 # (1.0) Version der Anwendung
-version = 1.0
+version = 0.5
 
 # Dateien und Verzeichnisse, die in die .apk-Datei aufgenommen werden
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,json,txt
+
+# (list) List of inclusions using pattern matching
+source.include_patterns = tempdaten.json,kontodaten.txt
 
 # Dateien oder Verzeichnisse, die von der .apk-Datei ausgeschlossen werden
-source.exclude_exts = spec
+#source.exclude_exts = spec
 
 # (main.py) Hauptdatei der Anwendung
-source.main = main.py
+#source.main = main.py
 
 # (.) Quelle des Codes
 source.dir = .
 
 # Konfiguration der Verteilungsdatei
 # Erstellen Sie ein Kivy-Paket mit den Kivy-Abhängigkeiten
-requirements = python3, kivy, bleak, asyncio, setuptools, android
+requirements = python3, kivy== 2.3.0, bleak, asyncio, setuptools, android,pyjnius
 
-
-
+android.debug = 1
 
 # Zusätzliche Argumente, die an p4a übergeben werden
-p4a = --sdk_dir=$HOME/.buildozer/android/platform/android-sdk
+p4a = --sdk_dir=$HOME/.buildwsl ozer/android/platform/android-sdk
 
 # Unterstützte Bildschirmorientierung
-orientation = portrait
+orientation = portrait,landscape
 
 # Berechtigungen für die Anwendung deaktivieren
 # Berechtigungen für die Android-Anwendung (z. B. Netzwerkzugriff, Bluetooth)
-android.permissions = INTERNET, ACCESS_NETWORK_STATE, BLUETOOTH, BLUETOOTH_ADMIN, ACCESS_WIFI_STATE, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION
+android.permissions = android.permission.INTERNET,android.permission.BLUETOOTH,android.permission.ACCESS_COARSE_LOCATION,android.permission.WRITE_EXTERNAL_STORAGE,android.permission.READ_EXTERNAL_STORAGE,android.permission.ACCESS_NETWORK_STATE,android.permission.BLUETOOTH_PRIVILEGED,android.permission.BLUETOOTH_SCAN,android.permission.BLUETOOTH_CONNECT,android.permission.BLUETOOTH_ADMIN,android.permission.BLUETOOTH_ADVERTISE,android.permission.ACCESS_FINE_LOCATION,,BLUETOOTH,ACCESS_COARSE_LOCATION,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,ACCESS_NETWORK_STATE,BLUETOOTH_PRIVILEGED,BLUETOOTH_SCAN,BLUETOOTH_CONNECT,BLUETOOTH_ADMIN,BLUETOOTH_ADVERTISE,ACCESS_FINE_LOCATION
 
+android.python_version = 3
 
 # Wenn Sie spezifische Konfigurationsdateien oder Daten benötigen, können Sie sie hier angeben
 android.add_asset_dirs = assets
@@ -51,10 +54,12 @@ android.icon = icon.png
 android.minapi = 21
 
 # Maximale unterstützte Android-API
-android.maxapi = 33
+android.maxapi = 34
 
 # Ziel-SDK für die Erstellung
-#android.sdk = 33
+android.sdk = 23
+
+android.ndk = 25b
 
 # Architektur der Android-Anwendung (armeabi-v7a für 32 Bit, arm64-v8a für 64 Bit)
 android.archs = armeabi-v7a, arm64-v8a
@@ -64,6 +69,8 @@ android.archs = armeabi-v7a, arm64-v8a
 cython.optimize = 1
 
 [buildozer]
-# SDK et NDK paths
-android.sdk_path = /home/boubadiallo/.buildozer/android/platform/android-sdk
-android.ndk_path = /home/boubadiallo/.buildozer/android/platform/android-ndk-r25b
+# (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
+log_level = 2
+
+# (int) Display warning if buildozer is run as root (0 = False, 1 = True)
+warn_on_root = 1

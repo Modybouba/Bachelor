@@ -7,7 +7,7 @@ import threading  # Importiert threading für Multithreading
 from kivy.clock import mainthread  # Importiert mainthread, um GUI-Updates im Hauptthread durchzuführen
 from bleak import BleakScanner, BleakClient  # Importiert BleakScanner und BleakClient für Bluetooth-Kommunikation
 
-Builder.load_file("MyArduino.kv")  # Lädt die KV-Datei mit der GUI-Definition
+Builder.load_file("main.kv")  # Lädt die KV-Datei mit der GUI-Definition
 
 # Definiert die richtige UUID für die Bluetooth-Charakteristik
 CHARACTERISTIC_UUID = "19B10000-E8F2-537E-4F6C-D104768A1214"  # Beispiel-UUID, ersetzen mit der richtigen
